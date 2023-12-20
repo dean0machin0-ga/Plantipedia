@@ -1,17 +1,16 @@
-import { Routes, Route } from "react-router-dom"
-import { useState, useEffect} from "react"
-import Plant from "../../pages/Plants/index"
-import Show from "../../pages/Show/index"
+// import { Routes, Route } from "react-router-dom"
+// import Plants from "../../pages/Plants"
+// import PlantDetails from "../../pages/PlantDetails"
 
-const Main = () => {
-    return (
-        <main>
-            <Routes>
-                <Route path="/" element={<Plant />} />
-                <Route path="/plant/:id" element={<Show />} />
-            </Routes>
-        </main>
-    );
-};
+// const Main = () => {
+//     return (
+//         <main>
+//             <Routes>
+//                 <Route path="/" element={<Plants />} />
+//                 <Route path="/plant/:id" element={<PlantDetails />} />
+//             </Routes>
+//         </main>
+//     );
+// };
 
-export default Main;
+// export default Main;

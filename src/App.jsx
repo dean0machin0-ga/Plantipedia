@@ -1,34 +1,30 @@
 import { useState, useEffect } from 'react'
 import { Route, Routes } from 'react-router'
-import axios from 'axios'
+// import axiosInstance from './axiosConfig'
 import Header from './components/Header/index'
-import Main from './components/Main/index'
-import Plant from './pages/Plants'
-import './App.css'
-
-
-const options = {
-  method: 'GET',
-  url: 'https://house-plants2.p.rapidapi.com/id/53417c12-4824-5995-bce0-b81984ebbd1d',
-  headers: {
-    'X-RapidAPI-Key': '71b12d4b25mshb3f90218c7116aap18f41ejsnd8bd73c57ee9',
-    'X-RapidAPI-Host': 'house-plants2.p.rapidapi.com'
-  }
-};
-
-try {
-	const response = await axios.request(options);
-	console.log(response.data);
-} catch (error) {
-	console.error(error);
-}
+// import Main from './components/Main/index'
+import Plants from './pages/Plants'
+import PlantDetails from './pages/PlantDetails'
 
 function App() {
   const [plant, setPlant] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
+  const [error, setError] = useState(null)
 
-  useEffect(() => {
-    getPlant()
-  }, [])
+//   const fetchPlants = async() => {
+//     try {
+//         const response = await fetch ('https://house-plants2.p.rapidapi.com/all')
+//         const plantData = await response.json()
+//         setPlant(plantData)
+//     }   catch (err) {
+//         console.log(err)
+//     }
+// }
+
+// useEffect(() => {
+//   fetchPlants()
+// }, [])
+
 
   return (
     <>
@@ -39,13 +35,13 @@ function App() {
       </header>
       <main>
         <Routes>
-          <Route path="/" element={ <Plants /> } />
+          <Route path="/" element={<Plants />} />
           <Route path="/details" element={<PlantDetails />} />
-          <Route path="/details/:id" element={ <PlanDetails />} />
-        </Routes> 
+          <Route path="/details/:id" element={<PlantDetails />} />
+        </Routes>
       </main>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
