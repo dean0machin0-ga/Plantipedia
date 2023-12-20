@@ -38,11 +38,17 @@ const Plants = (props) => {
                                     <div className="card-image">
                                         <img
                                             src={ plant.Img }
-                                            alt={ plant.latinName }
+                                            alt={ plant.commonName }
                                         />
                                     </div>
                                 <div className="card-title">
-                                    <h3>{ plant.latinName }</h3>
+                                    <h3>{ plant.commonName }</h3>
+                                </div>
+                                <div>
+                                    <h2>Plant Family:</h2>
+                                    <h3>{ plant.Family }</h3>
+                                    <h2>Plant Category:</h2>
+                                    <h3>{ plant.Categories }</h3>
                                 </div>
                             </div>
                         </Link>
