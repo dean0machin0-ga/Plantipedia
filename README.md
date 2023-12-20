@@ -32,7 +32,7 @@ Plantopedia is an exciting React web application designed for all the plant enth
 
 ## Getting Started
 
-For a live demo, you can also check out the deployed version of Plantopedia on Netlify: [Plantopedia on Netlify](https://your-netlify-deployment-link.com).
+For a live demo, you can also check out the deployed version of Plantopedia on Netlify: [Plantopedia on Netlify](https://plantopedia-pp.netlify.app/).
 
 or
 
