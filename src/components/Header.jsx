@@ -15,7 +15,7 @@ function Header() {
     const [header, setHeader] = useState([])
 
     const getHeaderData = async () => {
-    const response = await fetch("")
+    const response = await fetch('https://house-plants2.p.rapidapi.com/all-lite')
     const data = await response.json()
     setHeader(data)
     }

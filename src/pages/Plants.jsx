@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
-// import options from "../axiosConfig"
 
-const Plants = (props) => {
+const Plants = () => {
     const [plant, setPlant] = useState([])
     
+    const url = 'https://house-plants2.p.rapidapi.com/all-lite';
     const options = {
         method: 'GET',
         headers: {
@@ -15,7 +15,7 @@ const Plants = (props) => {
 
     const fetchPlants = async() => {
         try {
-            const response = await fetch ('https://house-plants2.p.rapidapi.com/all-lite', options)
+            const response = await fetch (url, options)
             const plantData = await response.json()
             console.log(plantData)
             setPlant(plantData)
@@ -45,10 +45,10 @@ const Plants = (props) => {
                                     <h3>{ plant.commonName }</h3>
                                 </div>
                                 <div>
-                                    <h2>Plant Family:</h2>
-                                    <h3>{ plant.Family }</h3>
                                     <h2>Plant Category:</h2>
                                     <h3>{ plant.Categories }</h3>
+                                    <h2>Climate:</h2>
+                                    <h3>{ plant.Climat}</h3>
                                 </div>
                             </div>
                         </Link>

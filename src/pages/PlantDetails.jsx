@@ -2,40 +2,33 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 
-const plantDetails = (props) => {
+
+const plantDetails = () => {
     const [plant, setPlant] = useState([])
     const { id } = useParams()
-    const url = `https://house-plants2.p.rapidapi.com/id/53417c12-4824-5995-bce0-b81984ebbd1d${id}`
+    const url = `https://house-plants2.p.rapidapi.com/id/${id}`
     
-    const settings = {
-        async: true,
-        crossDomain: true,
-        url: 'https://house-plants2.p.rapidapi.com/id/53417c12-4824-5995-bce0-b81984ebbd1d',
+    const options = {
         method: 'GET',
         headers: {
             'X-RapidAPI-Key': '71b12d4b25mshb3f90218c7116aap18f41ejsnd8bd73c57ee9',
             'X-RapidAPI-Host': 'house-plants2.p.rapidapi.com'
         }
-    };
-    
-    $.ajax(settings).done(function (response) {
-        console.log(response);
-    });
-
-    const getPlant = async () => {
+    }
+const fetchPlantDetails = async() => {
         try {
-            const response = await fetch(url)
-            const plantData = await response.json()
-            setPlant(plantData)
-            console.log(plantData)
+            const response = await fetch(url, options)
+            const result = await response.json()
+            console.log(result)
+            setPlant(result)
         }   catch (err) {
             console.log(err)
-        }
-    }
+        }}
+    
     
     useEffect(() => {
-        getPlant()
-    }, [])
+        fetchPlantDetails()
+    }, [id])
 
 return (
     <div className="details-container">
@@ -44,8 +37,14 @@ return (
             alt={ plant.commonName}
         />
         <div key={ plant.id } className="details-container">
-            <h2>{ plant.commonName }</h2>
-            <h3>{ plant.genus }</h3>
+            <h2>Common Names:</h2>
+            <ul>
+                { plant["Common name"] && plant["Common name"].map((name, index) => (
+                    <li key={ index }>{ name }</li>
+                ))}
+            </ul>
+            <h2>Plant Catagory:</h2>
+            <h3>{ plant.Categories }</h3>
             {/* <p>{ plant. }</p> */}
             <a
                 href={ plant.homepage }
