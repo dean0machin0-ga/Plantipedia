@@ -43,26 +43,42 @@ return (
                         src={ plant.Img}
                         alt={ plant.id }
                     />
+            <h2><strong>~GENERAL ATTRIBUTES~</strong></h2>
             <h2>Appeal:</h2>
             <h3>{ plant.Appeal }</h3>
-            <h2>Blooming Season:</h2>
+            <h2>Color of Leaf:</h2>
             <ul>
-                { Array.isArray(plant["Blooming season"]) && plant["Blooming season"].map((name, index) => (
+                { plant["Color of leaf"] && plant["Color of leaf"].map((name, index) => (
                     <li key={ index }>{ name }</li>
                     ))}
             </ul>
+            <h2>Blooming Season:</h2>
+            <p>{ plant["Blooming season"] }</p>
             <h2>Natural Climate:</h2>
             <h3>{ plant.Climat }</h3>
-            <h2>Plant Catagory:</h2>
-            <h3>{ plant.Categories }</h3>
+            {/* <h2>Plant Catagory:</h2>
+            <h3>{ plant.Categories }</h3> */}
             <h2>Plant Family:</h2>
             <h3>{ plant.Family }</h3>
+            <h2><strong>~CARE TIPS~</strong></h2>
+            <h2>Watering:</h2>
+            <h3>{ plant.Watering }</h3>
+            <h2>Growth:</h2>
+            <h3>{ plant.Growth }</h3>
+            <h2>Common Diseases:</h2>
+            <h3>{ plant.Disease}</h3>
+            <h2>Common Insects:</h2>
+            <ul>
+                { plant["Insects"] && plant["Insects"].map((name, index) => (
+                    <li key={ index }>{ name }</li>
+                    ))}
+            </ul>
             <a
-                href={ plant.homepage }
+                href={ plant.Url ||"#" }
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                <button>RETURN</button>
+                <button>LEARN MORE</button>
             </a>
         </div>
     </div>

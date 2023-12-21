@@ -26,18 +26,18 @@ function Header() {
     
     const loaded = () => (
         <header>
-            <h1>PLANTOPEDIA</h1>
             <nav style={navStyle}>
                 <Link to="/">
                     <div>HOME</div>
                 </Link>
-                <Link to="/Plants">
+                <Link to="/plants">
                     <div>PLANTS</div>
                 </Link>
                 <Link to="/Collection">
                     <div>COLLECTION</div>
                 </Link>
             </nav>
+            <h1>PLANTOPEDIA</h1>
         </header>
     )
     return header ? loaded() : <h1>loading...</h1>

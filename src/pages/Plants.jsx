@@ -29,7 +29,6 @@ const Plants = () => {
         
         return (
             <section className="container">
-                {/* <h1>PLANT PAGE</h1> */}
                 {
                     plant.map((plant) => {
                         return (
