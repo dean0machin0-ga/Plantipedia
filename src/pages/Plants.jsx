@@ -37,17 +37,18 @@ const Plants = () => {
                                     <div className="card-image">
                                         <img
                                             src={ plant.Img }
-                                            alt={ plant.commonName }
+                                            alt={ plant.id }
                                         />
                                     </div>
                                 <div className="card-title">
-                                    <h3>{ plant.commonName }</h3>
+                                <ul>
+                                    { plant["Common name"] && plant["Common name"].map((name, index) => (
+                                    <li key={ index }>{ name }</li>
+                                    ))}
+                                </ul>
                                 </div>
                                 <div>
-                                    <h2>Plant Category:</h2>
-                                    <h3>{ plant.Categories }</h3>
-                                    <h2>Climate:</h2>
-                                    <h3>{ plant.Climat}</h3>
+                                    <h3>{ plant["Latin name"] }</h3>
                                 </div>
                             </div>
                         </Link>

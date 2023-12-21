@@ -13,11 +13,20 @@ function Header() {
     }
     
     const [header, setHeader] = useState([])
+    const url = 'https://house-plants2.p.rapidapi.com/all-lite'
+
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '71b12d4b25mshb3f90218c7116aap18f41ejsnd8bd73c57ee9',
+            'X-RapidAPI-Host': 'house-plants2.p.rapidapi.com'
+        }
+    }
 
     const getHeaderData = async () => {
-    const response = await fetch('https://house-plants2.p.rapidapi.com/all-lite')
-    const data = await response.json()
-    setHeader(data)
+    const response = await fetch(url, options)
+    const result = await response.json()
+    setHeader(result)
     }
 
     useEffect(() => {
@@ -26,6 +35,7 @@ function Header() {
     
     const loaded = () => (
         <header>
+            
             <nav style={navStyle}>
                 <Link to="/">
                     <div>HOME</div>

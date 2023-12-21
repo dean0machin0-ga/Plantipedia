@@ -2,7 +2,6 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 
-
 const plantDetails = () => {
     const [plant, setPlant] = useState([])
     const { id } = useParams()
@@ -24,7 +23,6 @@ const fetchPlantDetails = async() => {
         }   catch (err) {
             console.log(err)
         }}
-    
     
     useEffect(() => {
         fetchPlantDetails()
