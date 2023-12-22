@@ -56,8 +56,8 @@ We welcome contributions from the plant-loving community! Whether it's fixing bu
 
 ## Connect with Us
 
-- Follow us on [Twitter](https://twitter.com/plantopediaapp) for the latest updates and plant tips.
-- Join our [Facebook group](https://www.facebook.com/groups/plantopedia) to connect with other plant enthusiasts.
-- For any questions or feedback, please email us at [info@plantopedia.com](mailto:info@plantopedia.com).
+- Follow us on [Twitter(Coming Soon)](https://twitter.com/plantopediaapp) for the latest updates and plant tips.
+- Join our [Facebook group(Coming Soon)](https://www.facebook.com/groups/plantopedia) to connect with other plant enthusiasts.
+- For any questions or feedback, please email us at [info@plantopedia.com(Coming Soon)](mailto:info@plantopedia.com).
 
 Plantopedia - Where Plant Lovers Unite! 🌿🌍🌸
