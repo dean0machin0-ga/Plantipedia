@@ -54,8 +54,6 @@ return (
             <p>{ plant["Blooming season"] }</p>
             <h2>Natural Climate:</h2>
             <h3>{ plant.Climat }</h3>
-            {/* <h2>Plant Catagory:</h2>
-            <h3>{ plant.Categories }</h3> */}
             <h2>Plant Family:</h2>
             <h3>{ plant.Family }</h3>
             <h2><strong>~CARE TIPS~</strong></h2>
