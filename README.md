@@ -2,7 +2,7 @@
 
 Welcome to **Plantopedia**, the go-to destination for all your plant needs! 🪴
 
-(![Plantopedia](image.png))
+![Plantopedia](image.png)
 
 ## About Plantopedia
 
@@ -15,7 +15,7 @@ Plantopedia is an exciting React web application designed for all the plant enth
 - Easily search for specific plants by name, category, or care requirements.
 - Find detailed information about each plant, including care instructions, growth habits, and more.
 
-### 🪴 Create Your Own Plants
+### 🪴 Create Your Own Plants (Coming Soon)
 - Have a unique plant that's not in our database? No problem!
 - Create and customize your own plant profiles with images, care tips, and personal notes.
 - Keep track of your plant collection and share it with the Plantopedia community.
