@@ -27,35 +27,35 @@ const Plants = () => {
         fetchPlants()
     }, [])
         
-        return (
-            <section className="container">
-                {
-                    plant.map((plant) => {
-                        return (
-                            <Link to={`/details/${ plant.id }`} key={ plant.id } >
-                                <div className="card">
-                                    <div className="card-image">
-                                        <img
-                                            src={ plant.Img }
-                                            alt={ plant.id }
-                                        />
-                                    </div>
-                                <div className="card-title">
-                                <ul>
-                                    { plant["Common name"] && plant["Common name"].map((name, index) => (
-                                    <li key={ index }>{ name }</li>
-                                    ))}
-                                </ul>
+    return (
+        <section className="container">
+            {
+                plant.map((plant) => {
+                    return (
+                        <Link to={`/details/${ plant.id }`} key={ plant.id } >
+                            <div className="card">
+                                <div className="card-image">
+                                    <img
+                                        src={ plant.Img }
+                                        alt={ plant.id }
+                                    />
                                 </div>
-                                <div>
-                                    <h3>{ plant["Latin name"] }</h3>
-                                </div>
+                            <div className="card-title">
+                            <ul>
+                                { plant["Common name"] && plant["Common name"].map((name, index) => (
+                                <li key={ index }>{ name }</li>
+                                ))}
+                            </ul>
                             </div>
-                        </Link>
-                        )
-                    })}
-                </section>
-                )
-            }
+                            <div>
+                                <h3>{ plant["Latin name"] }</h3>
+                            </div>
+                        </div>
+                    </Link>
+                    )
+                })}
+            </section>
+            )
+        }
 
 export default Plants

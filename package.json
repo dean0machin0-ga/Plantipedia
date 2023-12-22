@@ -9,8 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "autoprefixer": "^10.4.16",
     "axios": "^1.6.2",
     "mongodb": "^6.3.0",
+    "postcss": "^8.4.32",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router": "^6.21.0",
