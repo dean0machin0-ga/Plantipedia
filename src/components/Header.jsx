@@ -43,8 +43,8 @@ function Header() {
                 <Link to="/plants">
                     <div>PLANTS</div>
                 </Link>
-                <Link to="/Collection">
-                    <div>COLLECTION</div>
+                <Link to="/about">
+                    <div>ABOUT</div>
                 </Link>
             </nav>
             <h1>PLANTOPEDIA</h1>

@@ -4,7 +4,8 @@ import Footer from './components/Footer'
 import Plants from './pages/Plants'
 import PlantDetails from './pages/PlantDetails'
 import Home from './pages/Home'
-import Collection from './pages/Collection'
+import About from './pages/About'
+// import Collection from './pages/Collection'
 import './App.css'
 
 function App() {
@@ -17,7 +18,8 @@ function App() {
           <Route path="/plants" element={<Plants />} />
           <Route path="/details" element={<PlantDetails />} />
           <Route path="/details/:id" element={<PlantDetails />} />
-          <Route path="/collection" element={<Collection />} />
+          <Route path="/about" element={<About />} />
+          {/* <Route path="/collection" element={<Collection />} /> */}
         </Routes>
       <Footer />
     </div>
