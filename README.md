@@ -2,7 +2,7 @@
 
 Welcome to **Plantopedia**, the go-to destination for all your plant needs! 🪴
 
-![Plantopedia](plantopedia-screenshot.png)
+![Plantopedia](![Alt text](image.png))
 
 ## About Plantopedia
 
